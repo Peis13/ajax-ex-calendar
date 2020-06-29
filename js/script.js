@@ -72,7 +72,6 @@ $(document).ready(
               nome: nomeFestivita,
               classe: colore
             };
-            console.log(objGiorno);
             stampaGiorno(objGiorno);
 
             // Incremento il giorno di uno
