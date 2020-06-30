@@ -19,20 +19,22 @@
 
         <!-- Mese -->
         <div class="mese">
+
+          <!-- bottone mese precedente -->
           <span id="precedente">
             <i class="fas fa-angle-double-left"></i>
-            Precedente
           </span>
+
+          <!-- mese corrente -->
+          <h2 data-mese-corrente="" id="mese-corrente"></h2>
+
+          <!-- bottone mese successivo -->
           <span id="successivo">
-            Successivo
             <i class="fas fa-angle-double-right"></i>
           </span>
-          <h2>Gennaio</h2>
 
           <!-- giorni del mese -->
           <ul class="giorni"></ul>
-          <!-- fine giorni del mese -->
-
         </div>
         <!-- Fine Mese -->
       </div>
@@ -42,10 +44,11 @@
 
     <!-- Template Handlebars -->
     <script id="giorno-template" type="text/x-handlebars-template">
-      <li class="{{ classe }}">
-        {{ giorno }}{{ nome }}
+      <li data-giorno-corrente="{{ giorno_corrente }}" class="giorno">
+        {{ giorno }}
       </li>
     </script>
+    
     <!-- link javascript -->
     <script type="text/javascript" src="js/script.js"></script>
   </body>

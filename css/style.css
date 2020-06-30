@@ -29,7 +29,7 @@ h2 {
 }
 
 ul {
-  list-style-type: circle;
+  list-style-type: none;
 }
 
 li.rosso {
@@ -46,22 +46,19 @@ li.rosso {
 }
 
 .mese span {
-  font-size: 18px;
+  font-size: 25px;
   cursor: pointer;
   text-decoration: underline;
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 5px;
 }
 
 #precedente {
-  left: -50%;
-  transform: translate(50%, -50%);
+  left: 0;
 }
 
 #successivo {
-  right: -50%;
-  transform: translate(-50%, -50%);
+  right: 0;
 }
 
 .giorni {
@@ -75,7 +72,6 @@ li.rosso {
 }
 
 .giorni li {
-  margin-left: 20px;
   margin-bottom: 5px;
 }
 /* FINE CALENDARIO */
