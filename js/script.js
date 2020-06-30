@@ -57,7 +57,12 @@ $(document).ready(
         }
       }
     );
-    
+
+    $(document).on('click', '.rosso', function() {
+      $('.festivita').removeClass('visibile');
+      $(this).children().addClass('visibile')
+    });
+
     // --------------- FINE LOGICA --------------- //
 
     // --------------- FUNZIONI --------------- //
@@ -99,7 +104,7 @@ $(document).ready(
         );
 
         var giornoHB = {
-          giorno: giornoCorrente.format('DD MMMM'),
+          giorno: giornoCorrente.format('DD'),
           giorno_corrente: giornoCorrente.format('YYYY-MM-DD')
         };
 
@@ -137,7 +142,9 @@ $(document).ready(
               var giornoCorrispondente = $('.giorno[data-giorno-corrente="'+ giornoFestivo +'"]');
 
               giornoCorrispondente.addClass('rosso');
-              giornoCorrispondente.append(' - ' + arrayFestivita[i].name);
+              var nomeFestività = giornoCorrispondente.children();
+              nomeFestività.addClass('festivita');
+              nomeFestività.text(arrayFestivita[i].name);
             }
           },
           error: function() {
